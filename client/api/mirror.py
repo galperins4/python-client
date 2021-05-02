@@ -17,7 +17,6 @@ class Mirror(Resource):
             return self.request_get('accounts/{}'.format(acct_path), params)
     
     
-   
     def balances(self):
         pass
     
