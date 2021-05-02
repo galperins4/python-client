@@ -1,1 +1,1 @@
-# Hedora Mirror Node - Python Client
+# Hedora - Python Client
