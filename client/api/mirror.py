@@ -69,7 +69,7 @@ class Mirror(Resource):
     
     
     def token_info(self, token_id):
-        return self.request_get('tokens/{}'.format(token_id), params)
+        return self.request_get('tokens/{}'.format(token_id))
     
     
     def schedule_list(self, schedule_id=None, acct_id=None, executed=None, limit=None):
