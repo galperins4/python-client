@@ -26,6 +26,19 @@ class Mirror(Resource):
     def token_info(self):
         pass
     
+    
+    def schedule_list(self):
+        pass
+    
+    
+    def schedule_transaction(self):
+        pass
+    
+    
+    def transaction_state_proof(self):
+        pass
+    
+    
     def get(self, block_id):
         return self.request_get('blocks/{}'.format(block_id))
 
