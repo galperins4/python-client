@@ -2,11 +2,11 @@
 import backoff
 import requests
 
-from client.exceptions import ArkHTTPException, ArkParameterException
+from client.exceptions import MirrorHTTPException, MirrorParameterException
 
 
 def giveup_handler(_):
-    raise ArkHTTPException
+    raise MirrorHTTPException
 
 
 # This uses the full_jitter algorithm
@@ -48,11 +48,11 @@ class Connection(object):
 
     def _handle_response(self, response):
         if not response.content:
-            raise ArkHTTPException('No content in response', response=response)
+            raise MirrorHTTPException('No content in response', response=response)
 
         body = response.json()
         if not response.ok:
-            raise ArkHTTPException(
+            raise MirrorHTTPException(
                 '{} {} {} - {}'.format(
                     response.request.method,
                     response.status_code,
