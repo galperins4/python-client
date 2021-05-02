@@ -6,7 +6,7 @@ from pathlib import Path
 from client.connection import Connection
 from client.resource import Resource
 
-class MirrorClient(object):
+class HedoraClient(object):
 
     def __init__(self, hostname):
         """
