@@ -21,4 +21,4 @@ accounts = client.mirror.accounts(acct_path=acct_id)
 print(accounts)
 ```
 
-Refer to https://docs.hedera.com/guides/docs/mirror-node-api/cryptocurrency-api for API documentation
+Refer to [Mirror Node API](https://docs.hedera.com/guides/docs/mirror-node-api/cryptocurrency-api) for REST API documentation
