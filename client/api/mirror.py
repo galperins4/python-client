@@ -3,15 +3,29 @@ from client.resource import Resource
 
 class Mirror(Resource):
 
-    def all(self, page=None, limit=100, **kwargs):
-        extra_params = {name: kwargs[name] for name in kwargs if kwargs[name] is not None}
-        params = {
-            'page': page,
-            'limit': limit,
-            **extra_params
-        }
-        return self.request_get('blocks', params)
-
+    def accounts(self):
+        pass
+    
+    
+    def balances(self):
+        pass
+    
+    
+    def transactions(self):
+        pass
+    
+    
+    def topic_messages(self):
+        pass
+    
+    
+    def token_balances(self):
+        pass
+    
+    
+    def token_info(self):
+        pass
+    
     def get(self, block_id):
         return self.request_get('blocks/{}'.format(block_id))
 
