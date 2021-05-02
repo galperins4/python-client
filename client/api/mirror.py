@@ -17,9 +17,14 @@ class Mirror(Resource):
             return self.request_get('accounts/{}'.format(acct_path), params)
     
     
-    def balances(self):
-        pass
-    
+    def balances(self, acct_id=None, acct_balance=None, timestamp=None, acct_pubkey=None):
+        params = {
+            'account.id': acct_id,
+            'account.balance': acct_balance,
+            'timestamp': timestamp,
+            'account.publickey': acct_pubkey
+        }
+        return self.request_get('balances', params)
     
     def transactions(self):
         pass
