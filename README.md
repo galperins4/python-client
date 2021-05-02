@@ -13,7 +13,7 @@
 # import module
 from client import Hedora Client
 
-#initialize client
+# initialize client
 client = HedoraClient('https://testnet.mirrornode.hedera.com/api/v1')
 
 acct_id = '0.0.575713'
