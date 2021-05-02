@@ -7,7 +7,7 @@ class Mirror(Resource):
     def accounts(self, acct_path=None, transaction_type=None, acct_id=None, acct_balance=None, acct_pubkey=None):
         params = {
             'transactionType': transaction_type,
-            'account.id': account_id,
+            'account.id': acct_id,
             'account.balance': acct_balance,
             'account_publickey': acct_pubkey
         }
