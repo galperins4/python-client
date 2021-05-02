@@ -4,9 +4,9 @@ from client.resource import Resource
 class Mirror(Resource):
 
   
-    def accounts(self, acct_path=None, transaction_type=None, acct_id=None, acct_balance=None, acct_pubkey=None):
+    def accounts(self, acct_path=None, tx_type=None, acct_id=None, acct_balance=None, acct_pubkey=None):
         params = {
-            'transactionType': transaction_type,
+            'transactionType': tx_type,
             'account.id': acct_id,
             'account.balance': acct_balance,
             'account.publickey': acct_pubkey
@@ -26,9 +26,15 @@ class Mirror(Resource):
         }
         return self.request_get('balances', params)
     
-    def transactions(self):
-        pass
-    
+    def transactions(self, tx_type=None, acct_id=None, timestamp=None, result=None, htype=None):
+        params = {
+            'transactionType': tx_type,  
+            'account.id': acct_id,
+            'timestamp': timestamp,
+            'result': result,
+            'type': htype
+        }
+        return self.request_get('transactions', params)
     
     def topic_messages(self):
         pass
