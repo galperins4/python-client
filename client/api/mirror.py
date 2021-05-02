@@ -43,12 +43,12 @@ class Mirror(Resource):
             'consensusTimestamp': consensus_timestamp,
         }
         return self.request_get('topics/{}/messages'.format(topic_id), params)
-      
+      n
     
     def tokens(self, token_path=token_path, pubkey=pubkey, token_id=token_id, acct_id=acct_id):
         params = {
             'publickey': pubkey,
-            'token.id': token_id
+            'token.id': token_id,
             'account.id': acct_id,
         }
         if token_path == None:
