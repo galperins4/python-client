@@ -56,8 +56,8 @@ class Mirror(Resource):
         pass
     
     
-    def schedule_transaction(self):
-        pass
+    def schedule_transaction(self, schedule_id=schedule_id):
+        return self.request_get('schedules/{}'.format(schedule_id))
     
     
     def transaction_state_proof(self):
