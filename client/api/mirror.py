@@ -40,7 +40,7 @@ class Mirror(Resource):
         pass
     
     
-    def token_balances(self, token_id=token_id, acct_pubkey=None, acct_id=None, acct_balance=None, timestamp=None):
+    def token_balances(self, token_id, acct_pubkey=None, acct_id=None, acct_balance=None, timestamp=None):
         params = {
             'account.publickey': acct_pubkey,  
             'account.id': acct_id,
@@ -49,7 +49,7 @@ class Mirror(Resource):
         }
         return self.request_get('tokens/{}'.format(token_id))
     
-    def token_info(self, token_id=token_id):
+    def token_info(self, token_id):
         return self.request_get('tokens/{}/balances'.format(token_id), params)
     
     def schedule_list(self):
