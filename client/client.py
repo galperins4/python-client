@@ -6,7 +6,7 @@ from pathlib import Path
 from client.connection import Connection
 from client.resource import Resource
 
-class ArkClient(object):
+class MirrorClient(object):
 
     def __init__(self, hostname):
         """
