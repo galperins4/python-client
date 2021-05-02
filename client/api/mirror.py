@@ -43,7 +43,7 @@ class Mirror(Resource):
             'sequenceNumber': s_number,  
             'consensusTimestamp': consensus_timestamp,
         }
-        return self.request_get('topics/{}/messages/'.format(topic_id), params)
+        return self.request_get('topics/{}/messages'.format(topic_id), params)
 
     
     def tokens(self, token_path=None, pubkey=None, token_id=None, acct_id=None):
