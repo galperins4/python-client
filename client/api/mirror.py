@@ -65,11 +65,11 @@ class Mirror(Resource):
             'account.balance': acct_balance,  
             'timestamp': timestamp,
         }
-        return self.request_get('tokens/{}'.format(token_id), params)
+        return self.request_get('tokens/{}/balances'.format(token_id), params)
     
     
     def token_info(self, token_id):
-        return self.request_get('tokens/{}/balances'.format(token_id), params)
+        return self.request_get('tokens/{}'.format(token_id), params)
     
     
     def schedule_list(self, schedule_id=None, acct_id=None, executed=None, limit=None):
