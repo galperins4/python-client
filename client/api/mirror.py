@@ -65,7 +65,7 @@ class Mirror(Resource):
             'account.balance': acct_balance,  
             'timestamp': timestamp,
         }
-        return self.request_get('tokens/{}'.format(token_id))
+        return self.request_get('tokens/{}'.format(token_id), params)
     
     
     def token_info(self, token_id):
