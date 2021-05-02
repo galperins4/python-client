@@ -1,12 +1,12 @@
-class MirrorException(Exception):
+class HedoraException(Exception):
     pass
 
 
-class MirrorParameterException(ArkException):
+class HedoraParameterException(ArkException):
     pass
 
 
-class MirrorHTTPException(ArkException):
+class HedoraHTTPException(ArkException):
 
     def __init__(self, *args, **kwargs):
         self.response = kwargs.pop('response', None)
