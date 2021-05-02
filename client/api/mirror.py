@@ -3,10 +3,21 @@ from client.resource import Resource
 
 class Mirror(Resource):
 
-    def accounts(self):
-        pass
+  
+    def accounts(self, acct_path=None, transaction_type=None, acct_id=None, acct_balance=None, acct_pubkey=None):
+        params = {
+            'transactionType': transaction_type,
+            'account.id': account_id,
+            'account.balance': acct_balance,
+            'account_publickey': acct_pubkey
+        }
+        if path == None:
+            return self.request_get('accounts', params)
+        else:
+            return self.request.get('accounts/{}'.format(acct_path), params)
     
     
+   
     def balances(self):
         pass
     
@@ -48,9 +59,4 @@ class Mirror(Resource):
     def last(self):
         return self.request_get('blocks/last')
 
-    def transactions(self, block_id, page=None, limit=100):
-        params = {
-            'page': page,
-            'limit': limit,
-        }
-        return self.request_get('blocks/{}/transactions'.format(block_id), params)
+ 
