@@ -11,7 +11,7 @@ class Mirror(Resource):
             'account.balance': acct_balance,
             'account_publickey': acct_pubkey
         }
-        if path == None:
+        if acct_path == None:
             return self.request_get('accounts', params)
         else:
             return self.request.get('accounts/{}'.format(acct_path), params)
