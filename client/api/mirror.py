@@ -70,9 +70,15 @@ class Mirror(Resource):
         return self.request_get('tokens/{}/balances'.format(token_id), params)
     
     
-    def schedule_list(self):
-        pass
-    
+    def schedule_list(self, schedule_id=schedule_id, acct_id=acct_id, executed=executed, limit=limit):
+        params = {
+            'schedule.id': schedule_id,  
+            'account.id': acct_id,
+            'executed': executed,  
+            'limit': limit,
+        }
+        return self.request_get('schedules', params)
+      
     
     def schedule_transaction(self, schedule_id):
         return self.request_get('schedules/{}'.format(schedule_id))
