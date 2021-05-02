@@ -52,7 +52,7 @@ class Connection(object):
 
         body = response.json()
         if not response.ok:
-            raise MirrorHTTPException(
+            raise HedoraHTTPException(
                 '{} {} {} - {}'.format(
                     response.request.method,
                     response.status_code,
