@@ -26,6 +26,7 @@ class Mirror(Resource):
         }
         return self.request_get('balances', params)
     
+    
     def transactions(self, tx_type=None, acct_id=None, timestamp=None, result=None, htype=None):
         params = {
             'transactionType': tx_type,  
@@ -65,6 +66,7 @@ class Mirror(Resource):
             'timestamp': timestamp,
         }
         return self.request_get('tokens/{}'.format(token_id))
+    
     
     def token_info(self, token_id):
         return self.request_get('tokens/{}/balances'.format(token_id), params)
