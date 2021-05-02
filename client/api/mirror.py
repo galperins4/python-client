@@ -52,6 +52,7 @@ class Mirror(Resource):
     def token_info(self, token_id):
         return self.request_get('tokens/{}/balances'.format(token_id), params)
     
+    
     def schedule_list(self):
         pass
     
@@ -62,15 +63,3 @@ class Mirror(Resource):
     
     def transaction_state_proof(self):
         pass
-    
-    
-    def get(self, block_id):
-        return self.request_get('blocks/{}'.format(block_id))
-
-    def first(self):
-        return self.request_get('blocks/first')
-
-    def last(self):
-        return self.request_get('blocks/last')
-
- 
