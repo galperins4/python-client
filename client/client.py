@@ -4,7 +4,6 @@ from importlib import import_module
 from pathlib import Path
 
 from client.connection import Connection
-from client.exceptions import ArkParameterException
 from client.resource import Resource
 
 class ArkClient(object):
