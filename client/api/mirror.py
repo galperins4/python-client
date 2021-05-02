@@ -9,7 +9,7 @@ class Mirror(Resource):
             'transactionType': transaction_type,
             'account.id': acct_id,
             'account.balance': acct_balance,
-            'account_publickey': acct_pubkey
+            'account.publickey': acct_pubkey
         }
         if acct_path == None:
             return self.request_get('accounts', params)
