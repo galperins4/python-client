@@ -1,1 +1,1 @@
-from .client import MirrorClient
+from .client import HedoraClient
