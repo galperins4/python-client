@@ -14,7 +14,7 @@ class Mirror(Resource):
         if acct_path == None:
             return self.request_get('accounts', params)
         else:
-            return self.request.get('accounts/{}'.format(acct_path), params)
+            return self.request_get('accounts/{}'.format(acct_path), params)
     
     
    
