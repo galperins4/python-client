@@ -2,11 +2,11 @@
 import backoff
 import requests
 
-from client.exceptions import MirrorHTTPException, MirrorParameterException
+from client.exceptions import HedoraHTTPException, HedoraParameterException
 
 
 def giveup_handler(_):
-    raise MirrorHTTPException
+    raise HedoraHTTPException
 
 
 # This uses the full_jitter algorithm
@@ -48,7 +48,7 @@ class Connection(object):
 
     def _handle_response(self, response):
         if not response.content:
-            raise MirrorHTTPException('No content in response', response=response)
+            raise HedoraHTTPException('No content in response', response=response)
 
         body = response.json()
         if not response.ok:
