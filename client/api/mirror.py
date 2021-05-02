@@ -37,7 +37,7 @@ class Mirror(Resource):
         return self.request_get('transactions', params)
     
     
-    def topic_messages(self, topic_id, s_number=s_number, consensus_timestamp = consensus_timestamp):
+    def topic_messages(self, topic_id, s_number=None, consensus_timestamp = None):
         params = {
             'sequenceNumber': s_number,  
             'consensusTimestamp': consensus_timestamp,
@@ -45,7 +45,7 @@ class Mirror(Resource):
         return self.request_get('topics/{}/messages'.format(topic_id), params)
 
     
-    def tokens(self, token_path=token_path, pubkey=pubkey, token_id=token_id, acct_id=acct_id):
+    def tokens(self, token_path=None, pubkey=None, token_id=None, acct_id=None):
         params = {
             'publickey': pubkey,
             'token.id': token_id,
@@ -70,7 +70,7 @@ class Mirror(Resource):
         return self.request_get('tokens/{}/balances'.format(token_id), params)
     
     
-    def schedule_list(self, schedule_id=schedule_id, acct_id=acct_id, executed=executed, limit=limit):
+    def schedule_list(self, schedule_id=None, acct_id=None, executed=None, limit=None):
         params = {
             'schedule.id': schedule_id,  
             'account.id': acct_id,
