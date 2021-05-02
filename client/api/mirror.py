@@ -38,9 +38,9 @@ class Mirror(Resource):
         return self.request_get('transactions', params)
     
     
-    def topic_messages(self, topic_id, s_number=None, consensus_timestamp = None):
+    def topic_messages(self, topic_id, sequence_number=None, consensus_timestamp = None):
         params = {
-            'sequenceNumber': s_number,  
+            'sequenceNumber': sequence_number,  
             'consensusTimestamp': consensus_timestamp,
         }
         return self.request_get('topics/{}/messages'.format(topic_id), params)
