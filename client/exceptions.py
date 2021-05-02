@@ -1,13 +1,13 @@
 
-class ArkException(Exception):
+class MirrorException(Exception):
     pass
 
 
-class ArkParameterException(ArkException):
+class MirrorParameterException(ArkException):
     pass
 
 
-class ArkHTTPException(ArkException):
+class MirrorHTTPException(ArkException):
 
     def __init__(self, *args, **kwargs):
         self.response = kwargs.pop('response', None)
