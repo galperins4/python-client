@@ -14,12 +14,12 @@ tests_require = []
 extras_require = {}
 
 setuptools.setup(
-    name='hedora-python-client',
-    description='Python API client for Hedora Hashgraph.',
+    name='hedera-python-client',
+    description='Python API client for Hedera Hashgraph.',
     version='0.0.1',
     author='TBD',
     author_email='TBD',
-    url='https://github.com/galperins4/hedora-python-client',
+    url='https://github.com/galperins4/hedera-python-client',
     packages=setuptools.find_packages(exclude=['tests', 'tests.*']),
     install_requires=requires,
     extras_require=extras_require,
