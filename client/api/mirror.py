@@ -28,6 +28,15 @@ class Mirror(Resource):
     
     
     def balances(self, acct_id=None, acct_balance=None, timestamp=None, acct_pubkey=None):
+        '''
+        Query the balances endpoint
+        
+        :param str acct_id (query): The account ID (optional)
+        :param int acct_balance (query): The account balance (optional)
+        :param str timestamp (query): Timestamp for balances (optional)
+        :param str acct_pubkey (query): The account public key (optional)
+        '''
+        
         params = {
             'account.id': acct_id,
             'account.balance': acct_balance,
@@ -38,6 +47,16 @@ class Mirror(Resource):
     
     
     def transactions(self, tx_type=None, acct_id=None, timestamp=None, result=None, htype=None):
+        '''
+        Query the transactions endpoint
+        
+        :param str tx_type (query): The transaction type (optional)
+        :param str acct_id (query): The account ID (optional)
+        :param str timestamp (query): Timestamp for balances (optional)
+        :param str result (query): The transaction result - fail or success (optional)
+        :param str htype (query): The transaction type - credit or debit (optional)
+        '''
+        
         params = {
             'transactionType': tx_type,  
             'account.id': acct_id,
