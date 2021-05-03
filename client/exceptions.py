@@ -1,12 +1,12 @@
-class HedoraException(Exception):
+class HederaException(Exception):
     pass
 
 
-class HedoraParameterException(HedoraException):
+class HederaParameterException(HedoraException):
     pass
 
 
-class HedoraHTTPException(HedoraException):
+class HederaHTTPException(HedoraException):
 
     def __init__(self, *args, **kwargs):
         self.response = kwargs.pop('response', None)
