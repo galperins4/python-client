@@ -2,11 +2,11 @@
 import backoff
 import requests
 
-from client.exceptions import HedoraHTTPException, HedoraParameterException
+from client.exceptions import HederaHTTPException, HederaParameterException
 
 
 def giveup_handler(_):
-    raise HedoraHTTPException
+    raise HederaHTTPException
 
 
 # This uses the full_jitter algorithm
@@ -48,11 +48,11 @@ class Connection(object):
 
     def _handle_response(self, response):
         if not response.content:
-            raise HedoraHTTPException('No content in response', response=response)
+            raise HederaHTTPException('No content in response', response=response)
 
         body = response.json()
         if not response.ok:
-            raise HedoraHTTPException(
+            raise HederaHTTPException(
                 '{} {} {} - {}'.format(
                     response.request.method,
                     response.status_code,
