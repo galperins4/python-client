@@ -1,9 +1,9 @@
-# Hedora - Python Client
+# Hedera - Python Client
 
 ## Installation
-```git clone https://github.com/galperins4/hedora-python-client/```
+```git clone https://github.com/galperins4/hedera-python-client/```
 
-```cd hedora-python-client```
+```cd hedera-python-client```
 
 ```sudo python3 setup.py install```
 
@@ -11,10 +11,10 @@
 
 ```
 # import module
-from client import Hedora Client
+from client import Hedera Client
 
 # initialize client
-client = HedoraClient('https://testnet.mirrornode.hedera.com/api/v1')
+client = HederaClient('https://testnet.mirrornode.hedera.com/api/v1')
 
 acct_id = '0.0.575713'
 accounts = client.mirror.accounts(acct_path=acct_id)
