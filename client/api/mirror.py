@@ -5,6 +5,16 @@ class Mirror(Resource):
 
   
     def accounts(self, acct_path=None, tx_type=None, acct_id=None, acct_balance=None, acct_pubkey=None):
+        '''
+        Query the accounts endpoint
+        
+        :param str acct_path (path): The account ID (optional)
+        :param str tx_type (query): The transaction type (optional)
+        :param str acct_id (query): The account ID (optional)
+        :param int acct_balance (query): The account balance (optional)
+        :param str acct_pubkey (query): The account public key (optional)
+        '''
+        
         params = {
             'transactionType': tx_type,
             'account.id': acct_id,
