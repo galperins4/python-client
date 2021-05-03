@@ -1,1 +1,1 @@
-from .client import HedoraClient
+from .client import HederaClient
